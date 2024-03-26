@@ -1,8 +1,9 @@
 import express from 'express';
 import routes from './routes/index.js';
+import 'dotenv/config';
 
 const app = express();
-const port = 8000;
+const port = process.env.PORT;
 
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
